@@ -3,7 +3,6 @@
     "eslint:recommended",
     "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended",
-    "plugin:prettier/recommended",
     "prettier/@typescript-eslint"
   ],
   "plugins": [
@@ -14,15 +13,5 @@
   "parserOptions": {
     "sourceType": "module",
     "project": "./tsconfig.json"
-  },
-  "rules": {
-    "prettier/prettier": [
-      "error",
-      {
-        "singleQuote": true,
-        "semi": true,
-        "printWidth": 100
-      }
-    ]
   }
 }
