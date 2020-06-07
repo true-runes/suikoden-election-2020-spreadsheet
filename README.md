@@ -1,10 +1,6 @@
-# suikoden-election-2020-spreadsheet
+# Suikoden Election 2020 Spreadsheet
 
-Spreadsheet (Suikoden election 2020)
-
-# GAS Template
-
-A GAS template is powered by [howdy39/gas-clasp-starter: A starter template for Google Apps Script by clasp](https://github.com/howdy39/gas-clasp-starter)
+- Google Apps Script for Suikoden election 2020
 
 # 環境構築手順
 
@@ -51,3 +47,7 @@ $ yarn deploy
 - ~~`package.json` の `scripts` と `webpack.config.js` は自分用に修正していった方がいい~~
   - ~~デフォルトの `scripts` は自分にあっていないためリネームしてある~~
 - ~~`sample/` 配下には `gas-clasp-starter` に含まれているサンプルコードを配置してある~~
+
+# GAS Template
+
+- A GAS template is powered by [howdy39/gas-clasp-starter: A starter template for Google Apps Script by clasp](https://github.com/howdy39/gas-clasp-starter)
