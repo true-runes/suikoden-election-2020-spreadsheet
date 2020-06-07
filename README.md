@@ -30,6 +30,14 @@ A GAS template is powered by [howdy39/gas-clasp-starter: A starter template for 
   - デフォルトの `scripts` は自分にあっていないためリネームしてある
 - `sample/` 配下には `gas-clasp-starter` に含まれているサンプルコードを配置してある
 
+# 開発時実行コマンド
+
+```sh
+$ jest
+$ yarn build
+$ clasp push
+```
+
 # 参考
 
 - [howdy39/gas-clasp-starter: A starter template for Google Apps Script by clasp](https://github.com/howdy39/gas-clasp-starter)
