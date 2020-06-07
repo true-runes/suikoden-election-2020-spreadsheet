@@ -17,7 +17,7 @@ A GAS template is powered by [howdy39/gas-clasp-starter: A starter template for 
     - つまりスプレッドシートごとにリポジトリを作る必要がある
       - 開発用と本番用の場合はこの限りではない
 
-# 開発手順（古い内容のため、参考にしないこと）
+# 開発手順
 
 - `$ yarn build` すると `dist/` 配下にデプロイされるファイルがコピーされる
   - 単にコピーしているだけ
