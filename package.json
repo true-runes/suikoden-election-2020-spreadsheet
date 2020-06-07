@@ -5,10 +5,11 @@
   "main": "index.js",
   "scripts": {
     "default:lint": "eslint --fix src/**/*.ts",
-    "default:build": "npm run lint && npm run test && rimraf dist && webpack && cpx src/appsscript.json dist && cpx \"src/**/*.html\" dist",
-    "default:push": "npm run build && clasp push",
+    "default:build": "yarn default:lint && yarn default:test && rimraf dist && webpack && cpx src/appsscript.json dist && cpx \"src/**/*.html\" dist",
+    "default:push": "yarn default:build && clasp push",
     "default:test": "jest",
-    "build": "rimraf dist && webpack && cpx src/appsscript.json dist"
+    "build": "rimraf dist && cpx src/*.ts dist && cpx src/appsscript.json dist",
+    "deploy": "yarn build && clasp push"
   },
   "repository": {
     "type": "git",
