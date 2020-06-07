@@ -4,10 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "lint": "eslint --fix src/**/*.ts",
-    "test": "jest",
-    "build": "npm run lint && npm run test && rimraf dist && webpack && cpx src/appsscript.json dist && cpx \"src/**/*.html\" dist",
-    "push": "npm run build && clasp push"
+    "default:lint": "eslint --fix src/**/*.ts",
+    "default:build": "yarn default:lint && yarn default:test && rimraf dist && webpack && cpx src/appsscript.json dist && cpx \"src/**/*.html\" dist",
+    "default:push": "yarn default:build && clasp push",
+    "default:test": "jest",
+    "build": "rimraf dist && cpx src/**/*.ts dist && cpx src/appsscript.json dist",
+    "deploy": "yarn build && clasp push"
   },
   "repository": {
     "type": "git",
@@ -35,10 +37,10 @@
     "eslint-config-prettier": "6.10.0",
     "eslint-plugin-prettier": "3.1.2",
     "gas-webpack-plugin": "1.0.2",
-    "jest": "25.1.0",
+    "jest": "^26.0.1",
     "prettier": "1.19.1",
     "rimraf": "3.0.2",
-    "ts-jest": "25.2.1",
+    "ts-jest": "^26.1.0",
     "ts-loader": "6.2.1",
     "typescript": "3.8.3",
     "webpack": "4.42.0",
