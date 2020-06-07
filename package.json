@@ -8,7 +8,7 @@
     "default:build": "yarn default:lint && yarn default:test && rimraf dist && webpack && cpx src/appsscript.json dist && cpx \"src/**/*.html\" dist",
     "default:push": "yarn default:build && clasp push",
     "default:test": "jest",
-    "build": "rimraf dist && cpx src/*.ts dist && cpx src/appsscript.json dist",
+    "build": "rimraf dist && cpx src/**/*.ts dist && cpx src/appsscript.json dist",
     "deploy": "yarn build && clasp push"
   },
   "repository": {
