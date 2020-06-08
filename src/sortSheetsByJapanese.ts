@@ -6,19 +6,20 @@ const sortSheetsByJapanese = (): void => {
   const spreadsheet = SpreadsheetApp.getActiveSpreadsheet()
   const allSheetsList = spreadsheet.getSheets()
   const currentSheet = spreadsheet.getActiveSheet()
-  const sortInfo = {
+  const sortInfo: { sheetList: object; sheetNameList: string[] } = {
     sheetList: {},
     sheetNameList: [],
   }
 
   try {
     for (let count = 0; count < allSheetsList.length; count++) {
-      const sheetName = allSheetsList[count].getName()
+      const sheetName: string = allSheetsList[count].getName()
+      // FIXME: 型 'string' の式を使用して型 '{}' にインデックスを付けることはできないため、要素は暗黙的に 'any' 型になります。
       sortInfo['sheetList'][sheetName] = allSheetsList[count]
       sortInfo['sheetNameList'].push(sheetName)
     }
 
-    sortInfo['sheetNameList'].sort((a, b) => {
+    sortInfo['sheetNameList'].sort((a: string, b: string) => {
       a = a.toString().toLowerCase()
       b = b.toString().toLowerCase()
 
@@ -34,6 +35,7 @@ const sortSheetsByJapanese = (): void => {
       sheetCount++
     ) {
       const sheetName = sortInfo['sheetNameList'][sheetCount]
+      // FIXME: 型 'string' の式を使用して型 '{}' にインデックスを付けることはできないため、要素は暗黙的に 'any' 型になります。
       const activeSheet = sortInfo['sheetList'][sheetName]
       activeSheet.activate()
 
@@ -42,8 +44,8 @@ const sortSheetsByJapanese = (): void => {
     }
 
     currentSheet.activate()
-    Browser.msgBox('ソートが終了しました。ページを更新してください。')
+    ll('シートの日本語順でのソートが完了しました')
   } catch (e) {
-    Browser.msgBox(e.lineNumber + ':' + e)
+    ll(e.lineNumber + ':' + e)
   }
 }
