@@ -1104,10 +1104,10 @@
   resolved "https://registry.yarnpkg.com/@types/estree/-/estree-0.0.51.tgz#cfd70924a25a3fd32b218e5e420e6897e1ac4f40"
   integrity sha512-CuPgU6f3eT/XgKKPqKd/gLZV1Xmvf1a2R5POBOGQa6uv82xpls89HU5zKeVoyR8XzHd1RGNOlQlvUe3CFkjWNQ==
 
-"@types/google-apps-script@1.0.45":
-  version "1.0.45"
-  resolved "https://registry.yarnpkg.com/@types/google-apps-script/-/google-apps-script-1.0.45.tgz#b429095dd463dd91fc8df38a03690c6fcb4aebac"
-  integrity sha512-LOkwOeaoxt11splrb1REllLkRkpcwINHgsxzFHLFlwICzC8ld+UEUr8JJN4x4BVvzp7z/ZM1bDXJmD541CGzcw==
+"@types/google-apps-script@1.0.56":
+  version "1.0.56"
+  resolved "https://registry.yarnpkg.com/@types/google-apps-script/-/google-apps-script-1.0.56.tgz#5d0930bf6c224913532da4c63bede1df2d17afe2"
+  integrity sha512-3YGOtRlnWPSARl/n2BKt0qiIA6Y3/5BLC2zH9s/jcu+1rpxR07noLCFxTZ2BQBIfDl6+Vs9iKjLTgdbbL8q/mg==
 
 "@types/graceful-fs@^4.1.2":
   version "4.1.3"
