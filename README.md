@@ -2,6 +2,13 @@
 
 - Google Apps Script for Suikoden election 2020
 
+# この年の特徴
+- RDBMS は用いずに、TweetStorage を Rundeck 経由で操作して、スプレッドシート上でデータを完結させた
+  - TweetStorage で cron で Rundeck で特定ハッシュタグのツイートを取得する
+  - 取得したデータを特定のスプレッドシートにログとして書き連ねていく
+  - そのログをスプレッドシート内でやりとりして集計用や発表用などに加工する
+  - サイトの投票チェックはスプレッドシートを API化 して対応した
+
 # 環境構築手順
 
 - あらかじめ `$ clasp login` を行って `~/.clasprc.json` を作っておく必要がある
