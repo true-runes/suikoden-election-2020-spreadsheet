@@ -1,19 +1,28 @@
-on: [push]
-name: Suikoden Election 2020 Spreadsheet
-jobs:
-  suikoden_election_2020_spreadsheet_github_actions:
-    name: Suikoden Election 2020 Spreadsheet CI
-    runs-on: ubuntu-latest
+name: 幻水総選挙2020（スプレッドシート）
 
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - '**'
+    tags-ignore:
+      - 'v*.*.*'
+
+jobs:
+  gensosenkyo_2020_spreadsheet:
+    name: 幻水総選挙2020（スプレッドシート）
+    runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [12.x, 14.x, 16.x]
-
+        node-version: ['18.12.1']
     steps:
-    - uses: actions/checkout@v3
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
-      with:
-        node-version: ${{ matrix.node-version }}
-    - name: Install dependencies
-      run: yarn
+      - name: コードをチェックアウトする
+        uses: actions/checkout@v3
+      - name: Node.js のセットアップを行う
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: yarn
+          cache-dependency-path: yarn.lock
+      - name: $ yarn install を行う
+        run: yarn install
