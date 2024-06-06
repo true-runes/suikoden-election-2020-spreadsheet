@@ -12,17 +12,13 @@ jobs:
   gensosenkyo_2020_spreadsheet:
     name: 幻水総選挙2020（スプレッドシート）
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: ['18.12.1']
     steps:
       - name: コードをチェックアウトする
         uses: actions/checkout@a5ac7e51b41094c92402da3b24376905380afc29 # v4
       - name: Node.js のセットアップを行う
         uses: actions/setup-node@v4
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version-file: .node-version
           cache: yarn
-          cache-dependency-path: yarn.lock
       - name: $ yarn install を行う
         run: yarn install
