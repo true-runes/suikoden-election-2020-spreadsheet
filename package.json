@@ -35,7 +35,7 @@
     "cpx2": "8.0.0",
     "eslint": "9.29.0",
     "eslint-config-prettier": "10.1.5",
-    "eslint-plugin-prettier": "5.5.0",
+    "eslint-plugin-prettier": "5.5.1",
     "gas-webpack-plugin": "2.6.0",
     "jest": "30.0.3",
     "prettier": "3.6.1",
